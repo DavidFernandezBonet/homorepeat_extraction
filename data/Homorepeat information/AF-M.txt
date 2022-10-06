@@ -1,0 +1,448 @@
+CHAIN	A
+			There are no homorepeats
+CHAIN	A
+			There are no homorepeats
+CHAIN	A
+			There are no homorepeats
+CHAIN	A
+			PRO	4	610-613	[0.0, 0.0, 100.0]
+CHAIN	A
+			There are no homorepeats
+CHAIN	A
+			There are no homorepeats
+CHAIN	A
+			There are no homorepeats
+CHAIN	A
+			There are no homorepeats
+CHAIN	A
+			There are no homorepeats
+CHAIN	A
+			There are no homorepeats
+CHAIN	A
+			There are no homorepeats
+CHAIN	A
+			LYS	5	67-71	[100.0, 0.0, 0.0]
+			SER	9	42-50	[0.0, 0.0, 100.0]
+			GLY	6	36-41	[0.0, 0.0, 100.0]
+CHAIN	A
+			There are no homorepeats
+CHAIN	A
+			There are no homorepeats
+CHAIN	A
+			There are no homorepeats
+CHAIN	A
+			There are no homorepeats
+CHAIN	A
+			There are no homorepeats
+CHAIN	A
+			There are no homorepeats
+CHAIN	A
+			GLN	8	269-276	[0.0, 0.0, 100.0]
+CHAIN	A
+			There are no homorepeats
+CHAIN	A
+			There are no homorepeats
+CHAIN	A
+			There are no homorepeats
+CHAIN	A
+			ALA	4	148-151	[100.0, 0.0, 0.0]
+CHAIN	A
+			There are no homorepeats
+CHAIN	A
+			SER	7	13-19	[0.0, 0.0, 100.0]
+CHAIN	A
+			There are no homorepeats
+CHAIN	A
+			There are no homorepeats
+CHAIN	A
+			There are no homorepeats
+CHAIN	A
+			There are no homorepeats
+CHAIN	A
+			There are no homorepeats
+CHAIN	A
+			There are no homorepeats
+CHAIN	A
+			There are no homorepeats
+CHAIN	A
+			GLU	5	74-78	[0.0, 0.0, 100.0]
+CHAIN	A
+			There are no homorepeats
+CHAIN	A
+			GLY	4	126-129	[100.0, 0.0, 0.0]
+CHAIN	A
+			ALA	4	1881-1884	[100.0, 0.0, 0.0]
+			ASP	4	579-582	[75.0, 0.0, 25.0]
+CHAIN	A
+			There are no homorepeats
+CHAIN	A
+			There are no homorepeats
+CHAIN	A
+			GLN	7	308-314	[100.0, 0.0, 0.0]
+CHAIN	A
+			There are no homorepeats
+CHAIN	A
+			There are no homorepeats
+CHAIN	A
+			There are no homorepeats
+CHAIN	A
+			GLY	4	147-150	[0.0, 0.0, 100.0]
+CHAIN	A
+			There are no homorepeats
+CHAIN	A
+			There are no homorepeats
+CHAIN	A
+			There are no homorepeats
+CHAIN	A
+			There are no homorepeats
+CHAIN	A
+			There are no homorepeats
+CHAIN	A
+			There are no homorepeats
+CHAIN	A
+			There are no homorepeats
+CHAIN	A
+			SER	6	55-60	[0.0, 0.0, 100.0]
+			LEU	4	6-9	[100.0, 0.0, 0.0]
+CHAIN	A
+			There are no homorepeats
+CHAIN	A
+			There are no homorepeats
+CHAIN	A
+			There are no homorepeats
+CHAIN	A
+			There are no homorepeats
+CHAIN	A
+			There are no homorepeats
+CHAIN	A
+			ASP	5	1195-1199	[0.0, 0.0, 100.0]
+			ALA	4	792-795	[100.0, 0.0, 0.0]
+CHAIN	A
+			There are no homorepeats
+CHAIN	A
+			There are no homorepeats
+CHAIN	A
+			There are no homorepeats
+CHAIN	A
+			There are no homorepeats
+CHAIN	A
+			There are no homorepeats
+CHAIN	A
+			There are no homorepeats
+CHAIN	A
+			There are no homorepeats
+CHAIN	A
+			ALA	4	535-538	[100.0, 0.0, 0.0]
+CHAIN	A
+			There are no homorepeats
+CHAIN	A
+			There are no homorepeats
+CHAIN	A
+			GLU	4	564-567	[0.0, 0.0, 100.0]
+CHAIN	A
+			VAL	4	43-46	[0.0, 100.0, 0.0]
+			VAL	4	66-69	[0.0, 100.0, 0.0]
+CHAIN	A
+			There are no homorepeats
+CHAIN	A
+			There are no homorepeats
+CHAIN	A
+			PRO	4	334-337	[25.0, 0.0, 75.0]
+CHAIN	A
+			There are no homorepeats
+CHAIN	A
+			There are no homorepeats
+CHAIN	A
+			There are no homorepeats
+CHAIN	A
+			There are no homorepeats
+CHAIN	A
+			There are no homorepeats
+CHAIN	A
+			There are no homorepeats
+CHAIN	A
+			There are no homorepeats
+CHAIN	A
+			There are no homorepeats
+CHAIN	A
+			There are no homorepeats
+CHAIN	A
+			There are no homorepeats
+CHAIN	A
+			There are no homorepeats
+CHAIN	A
+			ALA	4	146-149	[0.0, 100.0, 0.0]
+CHAIN	A
+			There are no homorepeats
+CHAIN	A
+			There are no homorepeats
+CHAIN	A
+			There are no homorepeats
+CHAIN	A
+			There are no homorepeats
+CHAIN	A
+			There are no homorepeats
+CHAIN	A
+			There are no homorepeats
+CHAIN	A
+			There are no homorepeats
+CHAIN	A
+			There are no homorepeats
+CHAIN	A
+			There are no homorepeats
+CHAIN	A
+			There are no homorepeats
+CHAIN	A
+			THR	4	215-218	[0.0, 0.0, 100.0]
+			THR	4	543-546	[0.0, 0.0, 100.0]
+			SER	4	12-15	[0.0, 0.0, 100.0]
+			SER	4	1003-1006	[0.0, 0.0, 100.0]
+			SER	4	1032-1035	[0.0, 0.0, 100.0]
+			GLN	4	113-116	[0.0, 0.0, 100.0]
+			GLN	7	356-362	[0.0, 0.0, 100.0]
+			GLN	4	370-373	[0.0, 0.0, 100.0]
+			GLU	4	874-877	[0.0, 0.0, 100.0]
+			HIS	4	100-103	[0.0, 0.0, 100.0]
+			PRO	6	880-885	[0.0, 0.0, 100.0]
+CHAIN	A
+			There are no homorepeats
+CHAIN	A
+			There are no homorepeats
+CHAIN	A
+			LEU	4	297-300	[100.0, 0.0, 0.0]
+CHAIN	A
+			There are no homorepeats
+CHAIN	A
+			There are no homorepeats
+CHAIN	A
+			ALA	4	67-70	[75.0, 0.0, 25.0]
+			ARG	4	115-118	[0.0, 0.0, 100.0]
+CHAIN	A
+			There are no homorepeats
+CHAIN	A
+			There are no homorepeats
+CHAIN	A
+			There are no homorepeats
+CHAIN	A
+			There are no homorepeats
+CHAIN	A
+			There are no homorepeats
+CHAIN	A
+			There are no homorepeats
+CHAIN	A
+			There are no homorepeats
+CHAIN	A
+			PRO	4	128-131	[0.0, 0.0, 100.0]
+CHAIN	A
+			There are no homorepeats
+CHAIN	A
+			LEU	4	1011-1014	[75.0, 0.0, 25.0]
+			GLN	6	187-192	[100.0, 0.0, 0.0]
+			THR	4	1630-1633	[0.0, 0.0, 100.0]
+CHAIN	A
+			There are no homorepeats
+CHAIN	A
+			There are no homorepeats
+CHAIN	A
+			GLU	4	34-37	[100.0, 0.0, 0.0]
+CHAIN	A
+			SER	4	321-324	[0.0, 0.0, 100.0]
+CHAIN	A
+			There are no homorepeats
+CHAIN	A
+			There are no homorepeats
+CHAIN	A
+			There are no homorepeats
+CHAIN	A
+			There are no homorepeats
+CHAIN	A
+			There are no homorepeats
+CHAIN	A
+			There are no homorepeats
+CHAIN	A
+			ALA	4	1720-1723	[0.0, 0.0, 100.0]
+			THR	5	1664-1668	[0.0, 0.0, 100.0]
+			SER	4	1323-1326	[0.0, 0.0, 100.0]
+CHAIN	A
+			There are no homorepeats
+CHAIN	A
+			There are no homorepeats
+CHAIN	A
+			There are no homorepeats
+CHAIN	A
+			There are no homorepeats
+CHAIN	A
+			There are no homorepeats
+CHAIN	A
+			SER	4	424-427	[0.0, 0.0, 100.0]
+			ALA	4	335-338	[100.0, 0.0, 0.0]
+			GLN	4	78-81	[100.0, 0.0, 0.0]
+			GLN	5	83-87	[100.0, 0.0, 0.0]
+CHAIN	A
+			There are no homorepeats
+CHAIN	A
+			ALA	4	124-127	[100.0, 0.0, 0.0]
+			ALA	4	1706-1709	[0.0, 0.0, 100.0]
+CHAIN	A
+			There are no homorepeats
+CHAIN	A
+			There are no homorepeats
+CHAIN	A
+			GLY	4	129-132	[0.0, 0.0, 100.0]
+CHAIN	A
+			SER	5	116-120	[0.0, 0.0, 100.0]
+CHAIN	A
+			There are no homorepeats
+CHAIN	A
+			There are no homorepeats
+CHAIN	A
+			There are no homorepeats
+CHAIN	A
+			There are no homorepeats
+CHAIN	A
+			There are no homorepeats
+CHAIN	A
+			There are no homorepeats
+CHAIN	A
+			There are no homorepeats
+CHAIN	A
+			GLU	4	38-41	[75.0, 0.0, 25.0]
+CHAIN	A
+			There are no homorepeats
+CHAIN	A
+			There are no homorepeats
+CHAIN	A
+			There are no homorepeats
+CHAIN	A
+			ALA	4	166-169	[75.0, 0.0, 25.0]
+CHAIN	A
+			There are no homorepeats
+CHAIN	A
+			There are no homorepeats
+CHAIN	A
+			LEU	4	7-10	[100.0, 0.0, 0.0]
+CHAIN	A
+			There are no homorepeats
+CHAIN	A
+			GLY	5	174-178	[0.0, 0.0, 100.0]
+			ALA	4	205-208	[0.0, 50.0, 50.0]
+CHAIN	A
+			PRO	6	160-165	[0.0, 0.0, 100.0]
+			PRO	6	173-178	[0.0, 0.0, 100.0]
+			GLU	7	39-45	[0.0, 0.0, 100.0]
+CHAIN	A
+			There are no homorepeats
+CHAIN	A
+			SER	6	550-555	[0.0, 0.0, 100.0]
+CHAIN	A
+			There are no homorepeats
+CHAIN	A
+			There are no homorepeats
+CHAIN	A
+			There are no homorepeats
+CHAIN	A
+			There are no homorepeats
+CHAIN	A
+			There are no homorepeats
+CHAIN	A
+			LYS	4	366-369	[0.0, 0.0, 100.0]
+CHAIN	A
+			GLY	4	254-257	[0.0, 0.0, 100.0]
+			VAL	4	848-851	[0.0, 100.0, 0.0]
+CHAIN	A
+			ALA	5	139-143	[100.0, 0.0, 0.0]
+			ALA	4	159-162	[100.0, 0.0, 0.0]
+			LEU	6	285-290	[100.0, 0.0, 0.0]
+CHAIN	A
+			PHE	4	612-615	[100.0, 0.0, 0.0]
+CHAIN	A
+			There are no homorepeats
+CHAIN	A
+			There are no homorepeats
+CHAIN	A
+			GLN	7	269-275	[0.0, 0.0, 100.0]
+CHAIN	A
+			There are no homorepeats
+CHAIN	A
+			There are no homorepeats
+CHAIN	A
+			There are no homorepeats
+CHAIN	A
+			There are no homorepeats
+CHAIN	A
+			There are no homorepeats
+CHAIN	A
+			There are no homorepeats
+CHAIN	A
+			There are no homorepeats
+CHAIN	A
+			There are no homorepeats
+CHAIN	A
+			There are no homorepeats
+CHAIN	A
+			There are no homorepeats
+CHAIN	A
+			There are no homorepeats
+CHAIN	A
+			There are no homorepeats
+CHAIN	A
+			There are no homorepeats
+CHAIN	A
+			There are no homorepeats
+CHAIN	A
+			There are no homorepeats
+CHAIN	A
+			There are no homorepeats
+CHAIN	A
+			There are no homorepeats
+CHAIN	A
+			ALA	4	1197-1200	[100.0, 0.0, 0.0]
+CHAIN	A
+			ASP	7	455-461	[0.0, 0.0, 100.0]
+			ASP	5	463-467	[0.0, 0.0, 100.0]
+			GLU	5	363-367	[0.0, 0.0, 100.0]
+			GLU	12	369-380	[0.0, 0.0, 100.0]
+			GLU	4	407-410	[0.0, 0.0, 100.0]
+CHAIN	A
+			LEU	4	1327-1330	[0.0, 100.0, 0.0]
+CHAIN	A
+			There are no homorepeats
+CHAIN	A
+			ALA	4	181-184	[100.0, 0.0, 0.0]
+CHAIN	A
+			There are no homorepeats
+CHAIN	A
+			There are no homorepeats
+CHAIN	A
+			There are no homorepeats
+CHAIN	A
+			PRO	4	334-337	[25.0, 0.0, 75.0]
+CHAIN	A
+			There are no homorepeats
+CHAIN	A
+			There are no homorepeats
+CHAIN	A
+			There are no homorepeats
+CHAIN	A
+			There are no homorepeats
+CHAIN	A
+			There are no homorepeats
+CHAIN	A
+			There are no homorepeats
+CHAIN	A
+			There are no homorepeats
+CHAIN	A
+			There are no homorepeats
+CHAIN	A
+			There are no homorepeats
+CHAIN	A
+			There are no homorepeats
+CHAIN	A
+			ASP	6	158-163	[0.0, 0.0, 100.0]
+			GLU	4	329-332	[0.0, 0.0, 100.0]
+CHAIN	A
+			ALA	4	348-351	[0.0, 0.0, 100.0]
+CHAIN	A
+			There are no homorepeats
+CHAIN	A
+			SER	6	188-193	[0.0, 0.0, 100.0]
