@@ -1,16 +1,14 @@
-import Bio.PDB
-from Bio.PDB.PDBParser import PDBParser
 import numpy as np
 from itertools import groupby
 import csv
+import Bio.PDB
+from Bio.PDB.PDBParser import PDBParser
 from Bio.PDB import DSSP
 import os
 import time
 
 ### BIOPYTHON V 1.78
-### ATTENTION!!! DSSP NEEDS TO BE INSTALLED https://zoomadmin.com/HowToInstall/UbuntuPackage/dssp
-### MUST BE RUN IN UBUNTU FOR DIRECTORIES : "\", TODO: solve for windows with "//"
-# FIND HOMOREPEATS
+### DSSP NEEDS TO BE INSTALLED https://zoomadmin.com/HowToInstall/UbuntuPackage/dssp
 # ----------------------------------------
 def annotate_dictionary(my_list):
 
@@ -19,56 +17,34 @@ def annotate_dictionary(my_list):
     Creates a dictionary from a list. It indicates the element of the list (key)
     and how many times it repeats in a row.
     """""
-    # TO DO: add also the place where it starts.
-    # https://stackoverflow.com/questions/773/how-do-i-use-itertools-groupby maybe unsterstand it better with this?
-
-    #No sé si és possible perquè el bucle passa 99 vegades en una list de llargada 111.
-    #Diria que fa skip a coses repetides
-    #Counter is not good enough
-
     d = dict()
-
     #Check if the list is empty
     #If it is not, the function begins
     if not my_list:
         print("Empty sequence")
-
     else:
-
-
         #Creates a counter_list, that is, the times a certain aminoacid repeats
         #It is useful to later determine the position of the aminoacids
         counter_list=[]
         i=0
         initial_position= my_list[0][0] #first element of the list with index 1 is position
         counter= initial_position
-
         # determine final position (as there are some lists that are continuously repeating)
         positions=[]
         for o in range(len(my_list)):
             positions.append(my_list[o][0])
         final_position= max(positions)
 
-        #print("Initial Position", initial_position, ", Final Position", final_position, ", Length:", final_position-initial_position+1)
-
 
         #Create a list with only the aminoacid sequence
         list_sequence= []
         for j in range(len(my_list)):
             list_sequence.append(my_list[j][1])  #append aminoacid
-
-
-
         for k,v in groupby(list_sequence):
             counter_list.append(len(list(v)))
 
-
         #Creates a dictionary with 'AMINOACID': (number of repeats, starting position of the repeat)
         for k, v in groupby(list_sequence):
-
-            #setdefault returns the value of a certain key
-            #The value is converted in a list
-
             d.setdefault(k, []).append( (len(list(v)), counter ))
             counter += counter_list[i]
             if counter >= final_position:
@@ -76,26 +52,21 @@ def annotate_dictionary(my_list):
             i += 1
 
     return d
-    #It creates a dictionary: key--> the element of the list provided
-    #                         value--> list with the times it repeats in a row
+
 def unique(list1):
     # intilize a null list
     unique_list = []
-
     # traverse for all elements
     for x in list1:
         # check if exists in unique_list or not
         if x not in unique_list:
             unique_list.append(x)
-
     return unique_list
 def aminoacid_abreviation(letter):
     """""
     Translates aminoacids abreviation (one letter) into the usual three leters
     For example "G" --> "GLY"
     """""
-
-
     if letter == 'A':
         letter = 'ALA'
 
@@ -173,11 +144,8 @@ def aminoacid_abreviation(letter):
 
     elif letter == 'J':
         letter = 'XLE'
-
-
-
     else:
-        print("caca de la vaca, alguna no s'ha detectat")
+        raise ValueError("Abreviation not detected")
 
     return letter
 def structure_abbreviation(letter):
@@ -189,12 +157,12 @@ def structure_abbreviation(letter):
         letter= "COIL"
     return letter
 def are_there_homorepeats(d,homorepeat_min,pos_struc_X,final_result):
-    #Tells if there are homorepeats, which aminoacid and the length and the position
-    #The convention is the first aminoacid has the postiion number 1 (not 0)
+    """
+    Determine if there are homorepeats, which aminoacid and the length and the position
+    """
+    #Tells
     homorepeats = False
 
-    #pos_struc_X: [(757, 'COIL'), ..., ]
-    #the new one has (757, aminoacid, structure) !!!
 
     h_positions = []
     for item in d.items():
@@ -233,29 +201,16 @@ def are_there_homorepeats(d,homorepeat_min,pos_struc_X,final_result):
                 percentage_helix= (helix_count/length)*100
                 percentage_sheet= (sheet_count/length)*100
                 percentage_coil= (coil_count/length)*100
-                # ------------------------------
-
-                # print("Homorepeat", aminoacid, ". Length:", length, ". Position:",
-                #       start_pos, "to", final_pos, ". Its structure is:", percentage_helix, "% HELIX, ",
-                #       percentage_sheet, "% SHEET, ", percentage_coil, "% COIL.")
 
                 with open(final_result, 'a', newline='') as f:
                     writer = csv.writer(f, delimiter='\t')
                     writer.writerow(["","","",aminoacid, length, str(start_pos) + "-"+ str(final_pos), [percentage_helix,
                                      percentage_sheet, percentage_coil]])
-
-
                 homorepeats= True
-
-
-
-
     if homorepeats == False:
         with open(final_result, 'a', newline='') as f:
             writer = csv.writer(f, delimiter='\t')
             writer.writerow(["","","","There are no homorepeats"])
-
-
     return h_positions, homorepeats
 def find_structure(title, directory):
     # Returns a list with (position, aminoacid, structure)
@@ -263,24 +218,6 @@ def find_structure(title, directory):
     multiple_chains = True  # ACTIVAR SI NOMÉS VULL LA PRIMERA CADENA
     all = []
     with open(path, "r") as f:
-        # with warnings.catch_warnings():
-        #     warnings.simplefilter("error")  # warnings become exceptions
-        #     try:
-        #         p = PDBParser(PERMISSIVE=True, QUIET=True)
-        #         structure = p.get_structure("tmp", path)
-        #     except:
-        #     #except PDBConstructionWarning:
-        #         pass
-                # The Model in the PDB file consists of multiple Chains.
-                # Calling DSSP with the current Model will concatenate
-                # all Chains, and this is unavoidable because it's
-                # external to Python.  The DSSP result will need to be
-                # truncated after the fact.
-                #warnings.simplefilter("ignore")
-                #structure = PDBParser().get_structure("tmp", path)
-                #multiple_chains = True
-        #model = next(structure.get_models())  # I always work with Model 1
-
         try:
             p = PDBParser(PERMISSIVE=True, QUIET=True)
             structure = p.get_structure("tmp", path)
@@ -301,7 +238,6 @@ def find_structure(title, directory):
                     k0_list.append(k[0])
                 label_list = unique(k0_list)
 
-
                 for i in range(len(label_list)):
                     start_pos_logic = False
 
@@ -313,19 +249,12 @@ def find_structure(title, directory):
                                 start_pos_list.append(start_pos)
                                 start_pos_logic = True
 
-
-
-                # subset_keys = [k for k in output.keys() if k[0] == chain_a]     #Chain B happens if k[0]="B"
-
                 subset_keys_list = []  # list to store the different sequences. It will support "A", "B", "C", "D"
-
                 for i in range(len(label_list)):
                     subset_keys = [k for k in output.keys() if k[0] == label_list[i]]
                     output_append = [output[k] for k in subset_keys]
                     subset_keys_list.append(output_append)
-
             all = []  # num, amino, dssp, sequence A,B,C,D
-
             for i in range(len(subset_keys_list)):  # same length as label list (length = number of chains)
                 seq_label = label_list[i]
                 start_pos = start_pos_list[i]
@@ -333,21 +262,23 @@ def find_structure(title, directory):
                     all.append([start_pos, a, d, seq_label])
                     start_pos += 1
         except:
-            print("ADEU ADEU")
             pass
 
 
     return all
 def correct_sequence(sequence):
-    #From a list that has (position,aminoacid,structure)
-    # correct the position, the aminoacid 3 letter, the structure helix/sheet/coil
+    """
+    From a list that has (position,aminoacid,structure) correct the position, the aminoacid 3 letter
+    abd the structure: helix/sheet/coil
+    """
+
     for i in range(len(sequence)):
 
         sequence[i][1]= aminoacid_abreviation(sequence[i][1])    #aminoacid 3 letters
         sequence[i][2]= structure_abbreviation(sequence[i][2])   #correct structure (only 3 kinds)
 
     return sequence
-def final_message_structure(homorepeat_min,dct, final_result, directory):
+def final_message_structure(homorepeat_min,dct, final_result, directory, title, dihedral_t):
     h_positions_list = []  # list for the homo positions for EACH chain
     homorepeats_in_chain = []
     for key in dct.keys():         # The keys are the labels of the chain!
@@ -360,19 +291,16 @@ def final_message_structure(homorepeat_min,dct, final_result, directory):
         h_positions, homorepeats = are_there_homorepeats(d_A, homorepeat_min, sequence,final_result)  #list-tupple [(amino, position),...,(amino,position)]
         h_positions_list.append(h_positions)    # list of lists of tuples
         homorepeats_in_chain.append(homorepeats)
-    # WE GET THE PHI_PSI
-    get_homo_phipsi(title,h_positions_list,dihedral_t, directory)
+    # get phi_psi
+    get_homo_phipsi(title, h_positions_list, dihedral_t, directory)
     return homorepeats_in_chain
 
-def read_file_find_homorepeats(title,homorepeat_min,directory,final_result):
-
-
+def read_file_find_homorepeats(title, homorepeat_min, directory, final_result, dihedral_t):
     # Retrieve info about sequences (position, amino, structure, seq_label)
     all_sequences= find_structure(title, directory)
     all_sequences = correct_sequence(all_sequences)
 
     # Separate them by label (max 4 sequences)
-
     k0_list = []
     for i in range(len(all_sequences)):
         k0_list.append(all_sequences[i][3])
@@ -391,7 +319,7 @@ def read_file_find_homorepeats(title,homorepeat_min,directory,final_result):
             seq_label = all_sequences[i][3]
             if all_sequences[i][3] == label_list[u]:
                 dct[label_list[u]].append([position,amino,dssp])
-    homorepeats_in_chain = final_message_structure(homorepeat_min,dct, final_result, directory)
+    homorepeats_in_chain = final_message_structure(homorepeat_min,dct, final_result, directory, title, dihedral_t)
     return homorepeats_in_chain
 def read_all_files(homorepeat_min,directory,final_result):
     with open(final_result, 'w') as f:
@@ -414,9 +342,6 @@ def read_all_files(homorepeat_min,directory,final_result):
                 writer.writerow([counter, filename])
 
             homorepeats_chain = read_file_find_homorepeats(title, homorepeat_min, directory,final_result)
-
-
-
             continue
         else:
             continue
@@ -437,8 +362,6 @@ def phi_psi_degrees(phi_psi_index):
             phi_psi_index[i] = phi_psi_index[i]*(180/np.pi)
 
     return phi_psi_index
-
-
 
 def get_homo_phipsi(title, h_positions_list, dihedral_t, directory):
     p = PDBParser(PERMISSIVE=True, QUIET=True)
@@ -473,16 +396,7 @@ def get_homo_phipsi(title, h_positions_list, dihedral_t, directory):
                                 writer = csv.writer(f, delimiter='\t')
                                 writer.writerow([h_positions[iter][0], phi_psi_index])
                             print(h_positions[iter][0], phi_psi_index)
-
-                    # if residue.id[1] in h_positions:  # if the position is in the h_positions
-                    #
-                    #     phi_psi_index = phi_psi_degrees(phi_psi[res_index])    # get the phi,psi of this particular index
-                    #     with open(dihedral_t, 'a', newline='') as f:
-                    #         writer = csv.writer(f, delimiter='\t')
-                    #         writer.writerow([name_only, phi_psi_index])
-                    #     print(res_name, phi_psi_index)
     return
-
 
 def create_folder_if_not_exist(parent_dir, folder_name):
     path = parent_dir + "/" + folder_name
@@ -494,94 +408,7 @@ def create_folder_if_not_exist(parent_dir, folder_name):
         print(f"The new directory {path} is created!")
 
 
-rootdir = r"/home/david/Desktop/swissprot_pdb_v2_grouped"  # Directory with PDB files
-code_dir = os.getcwd()
 
 
 
-# #run your code
-homorepeat_min= 4 #Threshold for the homorepeat
 
-
-#directory=  r"C:\Users\David\PycharmProjects\Internships\Internship Dilraj\AF-test new database. 08-2022\AF-test"
-#title = 'deca_ALA.pdb'
-
-
-
-counter = 0
-# 1. Gets structure 2. Orders it in comprehensive list. 3. Summons final_message_structure
-# final_message_structure: 1. Writes chain A,B... 2. Summons annotate_dict and are_there_homorepeats
-
-
-# # Don't remember how I obtained homo_files... I think this is done for efficiency, only reading the files that really contain homorepeats
-# homo_files_list = []        # list of each pdb file with homorepeat
-# with open("Homo_files.txt", 'r') as f:
-#     reader = csv.reader(f, delimiter='\t')
-#
-#     for row in reader:
-#         homo_files_list.append(row[1])
-#
-#
-# with open(dihedral_t, 'w', newline='') as f:
-#     writer = csv.writer(f, delimiter='\t')
-#     writer.writerow(["Amino Acid, [Phi,Psi]"])
-
-
-# # Read all files
-# for filename in os.listdir(directory):
-#
-#     #if filename.endswith(".pdb"):  # end with .pdb or .ent
-#     #if filename in homo_files_list:                   # DEACTIVATED: UPDATE 2022-08-08. IDK why there was a homo_files_list
-#
-#     counter += 1
-#     print(counter)
-#     title = filename
-#     #print(filename)
-#     with open(final_result, 'a', newline="") as f:
-#         writer = csv.writer(f, delimiter='\t')
-#         read_file_find_homorepeats(title, homorepeat_min, directory, final_result)
-
-
-homorepeat_in_pdb_file = f'{code_dir}/data/homorepeats'
-
-with open(homorepeat_in_pdb_file, 'a', newline="") as h:
-    writer2 = csv.writer(h, delimiter='\t')
-    writer2.writerow(["File Name", "Chain position of homorepeat"])
-
-# Read all files
-time_start = time.perf_counter()
-for subdir, dirs, files in os.walk(rootdir):
-    folder_name = subdir[-4:]
-    # create_folder_if_not_exist(code_dir, folder_name)  # Do not need to create folders, for each data folder there is one file
-    dihedral_t = f'{code_dir}/data/dihedral_data_{folder_name}.txt'
-    final_result = f"{code_dir}/data/{folder_name}.txt"
-
-    with open(dihedral_t, 'w', newline='') as f:
-        writer = csv.writer(f, delimiter='\t')
-        writer.writerow(["Amino Acid, [Phi,Psi]"])
-
-    for file in files:
-        counter += 1
-        print(counter)
-
-
-        with open(final_result, 'a', newline="") as f:
-            title = str(file)
-            writer = csv.writer(f, delimiter='\t')
-
-            homorepeats_chain = read_file_find_homorepeats(title, homorepeat_min, subdir, final_result)
-        if True in homorepeats_chain:
-            with open(homorepeat_in_pdb_file, 'a', newline="") as h:
-                writer2 = csv.writer(h, delimiter='\t')
-                writer2.writerow([file, [i for i, x in enumerate(homorepeats_chain) if x]])
-
-        print(os.path.join(subdir, file))
-
-    time_elapsed = (time.perf_counter() - time_start)
-    print("time_elapsed", time_elapsed, "current_folder:", folder_name)
-
-
-time_elapsed = (time.perf_counter() - time_start)
-print("time_elapsed", time_elapsed)
-
- # CAREFUL, I THINK IT DOES NOT GET THE XAA and it classifies it as unknown.
