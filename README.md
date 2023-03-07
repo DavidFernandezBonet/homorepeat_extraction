@@ -18,9 +18,9 @@
 	4. Run the following command to clone the repository:
 
 	```console
-foo@bar:~$ git clone <repository URL>
-foo
-```
+	foo@bar:~$ git clone <repository URL>
+	foo
+	```
 
 	5. Replace <repository URL> with the URL of the repository you copied in step 2.
 
