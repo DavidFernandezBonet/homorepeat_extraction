@@ -8,7 +8,27 @@
 - Gather miscellaneous data such as the ratio of homorepeats given the aminoacid type or the secondary structure of the homorepeats. 
 
 ## Installation
-- Clone this repository 
+- Clone this repository:
+	1. Click on the "Code" button and copy the URL of the repository.
+
+	2. Open your terminal or Git Bash if you're on Windows.
+
+	3. Navigate to the directory where you want to clone the repository using the cd command.
+
+	4. Run the following command to clone the repository:
+
+	```console
+foo@bar:~$ git clone <repository URL>
+foo
+```
+
+	5. Replace <repository URL> with the URL of the repository you copied in step 2.
+
+	6. Press enter and Git will clone the repository to your local machine.
+
+
+
+
 - Make sure the requirements are satisfied
 
 ## Usage
