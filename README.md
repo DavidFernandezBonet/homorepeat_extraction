@@ -19,7 +19,6 @@
 
 	```console
 	foo@bar:~$ git clone <repository URL>
-	foo
 	```
 
 	5. Replace <repository URL> with the URL of the repository you copied in step 2.
@@ -38,7 +37,6 @@ The usage has been designed to be simple: open the terminal and run a Python scr
 
 ```console
 foo@bar:~$ python main.py my_homorepeat_threshold my_path_to_pdb
-foo
 ```
 
 - **Homorepeat threshold (integer)**: The minimum number of aminoacids in a row to be considered a homorepeat. For example, AAAAT contains a "A" homorepeat if the threshold is 4, but not if it is 5.
