@@ -24,9 +24,7 @@ if __name__ == "__main__":
     code_dir = os.getcwd()
     homorepeat_in_pdb_file = f'{code_dir}/data/files_with_homorepeats.txt'
 
-    with open(homorepeat_in_pdb_file, 'a', newline="") as h:
-        writ = csv.writer(h, delimiter='\t')
-        writ.writerow(["File Name", "Chain position of homorepeat"])
+
 
 
     create_folder_if_not_exist(code_dir, "data")
@@ -34,6 +32,11 @@ if __name__ == "__main__":
     create_folder_if_not_exist(f"{code_dir}/data/", "Homorepeat analysis")
     create_folder_if_not_exist(f"{code_dir}/data/", "Dihedral data")
     create_folder_if_not_exist(f"{code_dir}/data/", "test")
+
+    with open(homorepeat_in_pdb_file, 'w', newline="") as h:
+        writ = csv.writer(h, delimiter='\t')
+        writ.writerow(["File Name", "Chain position of homorepeat"])
+
     # Read all files
     time_start = time.perf_counter()
     counter = 0
