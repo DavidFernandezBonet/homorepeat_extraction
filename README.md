@@ -8,7 +8,7 @@
 - Gather miscellaneous data such as the ratio of homorepeats given the aminoacid type or the secondary structure of the homorepeats. 
 
 ## Installation
-- Clone this repository:
+- Clone this repository using git
 	1. Click on the "Code" button and copy the URL of the repository.
 
 	2. Open your terminal or Git Bash if you're on Windows.
@@ -18,17 +18,15 @@
 	4. Run the following command to clone the repository:
 
 	```console
-	foo@bar:~$ git clone <repository URL>
+	git clone <repository URL>
 	```
 
 	5. Replace <repository URL> with the URL of the repository you copied in step 2.
 
 	6. Press enter and Git will clone the repository to your local machine.
+- Download the repository as a zip file and access its contents
 
-
-
-
-- Make sure the requirements are satisfied
+Make sure the requirements are satisfied!
 
 ## Usage
 
@@ -36,7 +34,7 @@ The usage has been designed to be simple: open the terminal and run a Python scr
 
 
 ```console
-foo@bar:~$ python main.py my_homorepeat_threshold my_path_to_pdb
+python main.py my_homorepeat_threshold my_path_to_pdb
 ```
 
 - **Homorepeat threshold (integer)**: The minimum number of aminoacids in a row to be considered a homorepeat. For example, AAAAT contains a "A" homorepeat if the threshold is 4, but not if it is 5.
